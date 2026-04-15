@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PalmOracle – Privacy Policy</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg:        #1a1040;
+      --bg-card:   #231555;
+      --gold:      #D4AF37;
+      --gold-dim:  #a8882a;
+      --white:     #f5f0ff;
+      --muted:     #b0a8d0;
+      --border:    rgba(212, 175, 55, 0.25);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: Georgia, 'Times New Roman', serif;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Stars background ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at  7%  9%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 14% 22%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 23% 65%, rgba(255,255,255,0.45) 0%, transparent 100%),
+        radial-gradient(1px 1px at 31%  4%, rgba(255,255,255,0.60) 0%, transparent 100%),
+        radial-gradient(1px 1px at 38% 80%, rgba(255,255,255,0.40) 0%, transparent 100%),
+        radial-gradient(1px 1px at 46% 17%, rgba(255,255,255,0.50) 0%, transparent 100%),
+        radial-gradient(1px 1px at 53% 92%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 61% 43%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 69% 11%, rgba(255,255,255,0.45) 0%, transparent 100%),
+        radial-gradient(1px 1px at 77% 58%, rgba(255,255,255,0.60) 0%, transparent 100%),
+        radial-gradient(1px 1px at 85% 29%, rgba(255,255,255,0.40) 0%, transparent 100%),
+        radial-gradient(1px 1px at 92% 74%, rgba(255,255,255,0.50) 0%, transparent 100%),
+        radial-gradient(1px 1px at  3% 47%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 18% 88%, rgba(255,255,255,0.45) 0%, transparent 100%),
+        radial-gradient(1px 1px at 42% 35%, rgba(255,255,255,0.55) 0%, transparent 100%),
+        radial-gradient(1px 1px at 58%  6%, rgba(255,255,255,0.40) 0%, transparent 100%),
+        radial-gradient(1px 1px at 73% 82%, rgba(255,255,255,0.50) 0%, transparent 100%),
+        radial-gradient(1px 1px at 88% 51%, rgba(255,255,255,0.35) 0%, transparent 100%),
+        radial-gradient(1px 1px at 95% 18%, rgba(255,255,255,0.60) 0%, transparent 100%),
+        radial-gradient(1px 1px at 10% 72%, rgba(255,255,255,0.45) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Layout ── */
+    .page-wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .brand-palm { font-size: 1rem; letter-spacing: 0.14em; color: var(--gold); font-weight: 300; }
+    .brand-oracle { font-size: 1rem; letter-spacing: 0.08em; color: var(--white); font-weight: 700; }
+
+    .orb {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 35%, #8b5cf6, #4c1d95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 0 18px rgba(139, 92, 246, 0.55);
+    }
+
+    .divider-gold {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 20px;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    header .updated {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Sections ── */
+    section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 1.15em;
+      background: var(--gold);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    section p {
+      color: var(--muted);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    section p:last-child { margin-bottom: 0; }
+
+    section ul, section ol {
+      margin: 10px 0 12px 20px;
+      color: var(--muted);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.95rem;
+    }
+
+    section li { margin-bottom: 6px; }
+
+    .highlight {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+    }
+
+    .highlight p {
+      color: var(--white);
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    .not-collected {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      background: rgba(139, 92, 246, 0.15);
+      border: 1px solid rgba(139, 92, 246, 0.35);
+      border-radius: 100px;
+      padding: 4px 14px;
+      font-size: 0.82rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #c4b5fd;
+      white-space: nowrap;
+    }
+
+    .pill.no {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.25);
+      color: #fca5a5;
+    }
+
+    .pill.no::before { content: '✕ '; }
+
+    .third-party-block {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .third-party-item {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+
+    .third-party-item strong {
+      display: block;
+      color: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .third-party-item p {
+      margin-bottom: 0;
+      font-size: 0.88rem;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    /* ── Contact ── */
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #D4AF37, #a8882a);
+      color: #1a1040;
+      font-weight: 700;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      padding: 10px 22px;
+      border-radius: 100px;
+      margin-top: 14px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      color: var(--muted);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 540px) {
+      .page-wrapper { padding: 40px 16px 60px; }
+      section { padding: 22px 20px; }
+      .brand { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <span class="brand-palm">PALM</span>
+        <div class="orb">🤚</div>
+        <span class="brand-oracle">ORACLE</span>
+      </div>
+      <div class="divider-gold"></div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 2026</p>
+    </header>
+
+    <!-- Overview -->
+    <section>
+      <h2>Overview</h2>
+      <p>
+        PalmOracle is an iOS app that provides AI-powered palmistry readings based on photographs of your palms.
+        This policy explains what information the app collects, how it is used, and what is never collected.
+      </p>
+      <p>
+        <strong style="color: var(--white);">Developer:</strong> Ranidu Lankage
+      </p>
+      <div class="highlight">
+        <p>
+          PalmOracle is designed with privacy at its core. There are no user accounts, no sign-ups, and no
+          personal profiles. Your readings belong to you and stay on your device.
+        </p>
+      </div>
+    </section>
+
+    <!-- What we collect -->
+    <section>
+      <h2>What We Collect</h2>
+      <p>PalmOracle collects only the minimum information necessary to function:</p>
+      <ul>
+        <li>
+          <strong style="color: var(--white);">Palm images</strong> — Photos you take or select are sent
+          to our AI backend solely to generate your reading. Images are processed in transit and are
+          <em>not</em> stored on any server after the reading is complete.
+        </li>
+        <li>
+          <strong style="color: var(--white);">Anonymous device ID</strong> — A random identifier
+          (never tied to your identity, Apple ID, or any personal information) is used exclusively
+          to enforce the free reading limit and prevent abuse. It is not linked to any other data.
+        </li>
+        <li>
+          <strong style="color: var(--white);">Anonymous usage analytics</strong> — Basic events such
+          as "reading started" and "reading completed" are logged to help us understand how the app is
+          used and improve the experience. These events contain no personal data.
+        </li>
+      </ul>
+    </section>
+
+    <!-- What we do NOT collect -->
+    <section>
+      <h2>What We Do Not Collect</h2>
+      <p>PalmOracle does not collect, store, or process any of the following:</p>
+      <div class="not-collected">
+        <span class="pill no">Name</span>
+        <span class="pill no">Email address</span>
+        <span class="pill no">Phone number</span>
+        <span class="pill no">Location data</span>
+        <span class="pill no">Apple ID</span>
+        <span class="pill no">Contacts</span>
+        <span class="pill no">Health data</span>
+        <span class="pill no">Financial information</span>
+        <span class="pill no">Browsing history</span>
+        <span class="pill no">Precise device identifiers</span>
+        <span class="pill no">Biometric data</span>
+        <span class="pill no">Account credentials</span>
+      </div>
+    </section>
+
+    <!-- Reading history -->
+    <section>
+      <h2>Reading History &amp; Local Storage</h2>
+      <p>
+        All reading history — including palm images, the full reading text, and follow-up chat messages —
+        is stored <strong style="color: var(--white);">locally on your device only</strong>.
+        This data never leaves your device except when you explicitly use the Share or Export features.
+      </p>
+      <p>
+        Your reading history is automatically included in your device's standard iCloud Backup (if you
+        have iCloud Backup enabled) as part of normal iOS backup behavior. This is controlled entirely
+        by your own iCloud settings.
+      </p>
+      <p>
+        When you delete the PalmOracle app, all locally stored readings and data are permanently
+        removed from your device.
+      </p>
+    </section>
+
+    <!-- Third parties -->
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>PalmOracle uses the following third-party services to deliver its functionality:</p>
+      <div class="third-party-block">
+        <div class="third-party-item">
+          <strong>Anthropic Claude API</strong>
+          <p>
+            Palm images and reading requests are processed by Anthropic's Claude AI model via a
+            secure proxy server. Images are transmitted over an encrypted connection (HTTPS) and
+            are not retained after the reading is generated. Anthropic's privacy policy is available
+            at <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a>.
+          </p>
+        </div>
+        <div class="third-party-item">
+          <strong>Supabase</strong>
+          <p>
+            Supabase powers our backend proxy, which handles AI request routing, anonymous usage
+            analytics events, and rate limiting. No personally identifiable information is stored
+            in Supabase. Supabase's privacy policy is available at
+            <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.
+          </p>
+        </div>
+      </div>
+      <p style="margin-top: 14px;">
+        The Anthropic API key is held exclusively on the server and is never stored on or transmitted
+        to your device.
+      </p>
+    </section>
+
+    <!-- Data security -->
+    <section>
+      <h2>Data Security</h2>
+      <p>
+        All network communication between PalmOracle and our backend uses HTTPS with TLS encryption.
+        Locally stored readings are protected by iOS Data Protection
+        (<code style="font-family: monospace; font-size: 0.85rem; color: #c4b5fd;">NSFileProtectionCompleteUnlessOpen</code>),
+        meaning they are encrypted at rest and inaccessible while the device is locked.
+      </p>
+      <p>
+        Because there are no user accounts, there are no passwords to compromise and no central
+        database of user profiles to breach.
+      </p>
+    </section>
+
+    <!-- Children -->
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>
+        PalmOracle is not directed at children under the age of 13 and does not knowingly collect
+        any information from children. If you believe a child has used the app, please contact us
+        using the address below.
+      </p>
+    </section>
+
+    <!-- Changes -->
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. When we do, we will revise the
+        "Last updated" date at the top of this page. Continued use of PalmOracle after any changes
+        constitutes your acceptance of the updated policy.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions about this Privacy Policy or how PalmOracle handles your data,
+        please reach out:
+      </p>
+      <a class="contact-link" href="mailto:support@palmoracle.app">
+        ✉ support@palmoracle.app
+      </a>
+    </section>
+
+    <footer>
+      <p>© 2026 Ranidu Lankage · PalmOracle · All rights reserved</p>
+    </footer>
+
+  </div>
+</body>
+</html>
